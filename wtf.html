@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Madhumithaa Resume Portfolio</title>
+
+<style>
+:root {
+    --green-dark: #1b3a2f;
+    --green-light: #132a22;
+    --gold: #d4af37;
+    --cream: #f8f6f1;
+    --text-dark: #2c2c2c;
+    --white: #ffffff;
+    --font-main: "Georgia", serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-main);
+    background: var(--cream);
+    color: var(--text-dark);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--green-dark);
+    color: var(--gold);
+    padding: 15px 0;
+    text-align: center;
+    z-index: 999;
+    font-weight: bold;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.3);
+}
+.navbar a {
+    color: var(--gold);
+    margin: 0 15px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.navbar a:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+.top-space {
+    margin-top: 80px;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 30%;
+    background: linear-gradient(180deg, var(--green-dark), var(--green-light));
+    padding: 30px;
+    text-align: center;
+    color: var(--cream);
+    animation: slideInLeft 1.2s ease-in-out;
+    box-shadow: 4px 0 25px rgba(0,0,0,0.2);
+}
+
+.sidebar img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 4px solid var(--gold);
+    transition: transform 0.4s ease, box-shadow 0.4s;
+}
+.sidebar img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px var(--gold);
+}
+
+.sidebar h1 {
+    color: var(--gold);
+    margin-top: 15px;
+}
+
+.sidebar a {
+    display: block;
+    margin: 12px 0;
+    text-decoration: none;
+    color: var(--gold);
+    font-weight: bold;
+    transition: 0.3s;
+}
+.sidebar a:hover {
+    transform: scale(1.1);
+    color: #ffffff;
+}
+.content {
+    width: 70%;
+    background: var(--white);
+    padding: 40px;
+    animation: slideInRight 1.2s ease-in-out;
+}
+
+h2 {
+    color: var(--green-dark);
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.float-box {
+    float: right;
+    width: 180px;
+    padding: 10px;
+    margin-left: 15px;
+    border: 2px solid var(--gold);
+    border-radius: 10px;
+    background: var(--cream);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+}
+table th {
+    background: var(--green-dark);
+    color: var(--cream);
+    padding: 10px;
+}
+table td {
+    border: 1px solid var(--gold);
+    padding: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #aaa;
+}
+.contact-form button {
+    background: var(--green-dark);
+    color: var(--cream);
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.contact-form button:hover {
+    transform: scale(1.05);
+    background: var(--green-light);
+}
+
+footer {
+    text-align: center;
+    background: var(--green-dark);
+    color: var(--gold);
+    padding: 20px;
+    margin-top: 30px;
+}
+@keyframes slideInLeft {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+@keyframes slideInRight {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .sidebar, .content {
+        width: 100%;
+    }
+    .float-box {
+        float: none;
+        margin: 10px auto;
+        display: block;
+    }
+}
+
+</style>
+</head>
+
+<body>
+<div class="navbar">
+    <a href="#">Home</a>
+    <a href="#">Skills</a>
+    <a href="#">Projects</a>
+    <a href="#">Contact</a>
+</div>
+
+<div class="top-space"></div>
+
+<div class="container">
+
+    <div class="sidebar">
+        <img src="image.jpg" alt="Profile Picture">
+        <h1>Madhumithaa R M</h1>
+        <p>M.Tech – Computer Science & Engineering<br>Sri Sai Ram Engineering College</p>
+
+        <a href="mailto:sec23cj025@sairamtap.edu.in">📧 Email</a>
+        <a href="tel:+919361768748">📞 Phone</a>
+        <a href="https://github.com/Madhumithaa-R-M7" target="_blank">💻 GitHub</a>
+        <a href="https://www.linkedin.com/in/madhumithaa-rm-18959a296" target="_blank">🔗 LinkedIn</a>
+    </div>
+
+    <div class="content">
+
+        <h2>About Me</h2>
+        <p>
+            <div class="float-box">
+                Passionate Developer<br>
+                Creative Designer<br>
+                Fast Learner 💡
+            </div>
+            A passionate Computer Science student skilled in UI/UX, Web Design, Python, and Java. 
+            I enjoy building beautiful, functional, and responsive web interfaces.
+        </p>
+
+        <h2>Education</h2>
+        <table>
+            <tr>
+                <th>Course</th><th>Institution</th><th>Year</th><th>CGPA</th>
+            </tr>
+            <tr>
+                <td>M.Tech Integrated CSE</td>
+                <td>Sri Sai Ram Engineering College</td>
+                <td>2023–Present</td>
+                <td>8.3</td>
+            </tr>
+            <tr>
+                <td>HSC</td>
+                <td>St. Theresa Girls Hr. Sec. School</td>
+                <td>2023</td>
+                <td>84%</td>
+            </tr>
+            <tr>
+                <td>SSLC</td>
+                <td>St. Theresa Girls Hr. Sec. School</td>
+                <td>2021</td>
+                <td>100%</td>
+            </tr>
+        </table>
+
+        <h2>Projects & Experience</h2>
+        <ul>
+            <li><b>Zero School Internship (15 Days)</b> – Worked on real-time applications.</li>
+            <li><b>Blitz Work Internship (30 Days)</b> – AI & IoT systems development.</li>
+
+        </ul>
+<h2>Technical Skills</h2>
+<ul>
+    <li>Python, Java, C++</li>
+    <li>Frontend Development (HTML, CSS, JavaScript, React.js)</li>
+    <li>UI/UX Designing</li>
+</ul>
+
+
+        <h2>Contact Me</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="4" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+            <button type="reset">Reset</button>
+        </form>
+    </div>
+</div>
+
+<footer>
+    © 2025 | Designed by Madhumithaa | WebVibe Studios
+</footer>
+
+</body>
+</html>
