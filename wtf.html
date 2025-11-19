@@ -16,16 +16,6 @@
     --font-main: "Georgia", serif;
 }
 
-/* DARK THEME VARIABLES */
-body.dark {
-    --cream: #111;
-    --white: #1a1a1a;
-    --text-dark: #ffffff;
-    --green-dark: #0c1f18;
-    --green-light: #07140f;
-    --gold: #e6c557;
-}
-
 body {
     margin: 0;
     padding: 0;
@@ -34,9 +24,7 @@ body {
     color: var(--text-dark);
     overflow-x: hidden;
     line-height: 1.6;
-    transition: background 0.5s, color 0.5s;
 }
-
 .navbar {
     position: fixed;
     top: 0;
@@ -49,7 +37,6 @@ body {
     z-index: 999;
     font-weight: bold;
     box-shadow: 0 3px 15px rgba(0,0,0,0.3);
-    transition: 0.5s;
 }
 .navbar a {
     color: var(--gold);
@@ -62,30 +49,8 @@ body {
     transform: scale(1.1);
 }
 
-.theme-btn {
-    background: var(--gold);
-    padding: 8px 14px;
-    border-radius: 6px;
-    color: black;
-    font-weight: bold;
-    margin-left: 20px;
-    cursor: pointer;
-    border: none;
-    transition: 0.3s;
-}
-.theme-btn:hover {
-    transform: scale(1.1);
-}
-
-.theme-status {
-    display: block;
-    margin-top: 8px;
-    font-weight: bold;
-    color: var(--gold);
-}
-
 .top-space {
-    margin-top: 110px;
+    margin-top: 80px;
 }
 
 .container {
@@ -101,7 +66,6 @@ body {
     color: var(--cream);
     animation: slideInLeft 1.2s ease-in-out;
     box-shadow: 4px 0 25px rgba(0,0,0,0.2);
-    transition: 0.5s;
 }
 
 .sidebar img {
@@ -133,13 +97,11 @@ body {
     transform: scale(1.1);
     color: #ffffff;
 }
-
 .content {
     width: 70%;
     background: var(--white);
     padding: 40px;
     animation: slideInRight 1.2s ease-in-out;
-    transition: 0.5s;
 }
 
 h2 {
@@ -174,6 +136,28 @@ table td {
     padding: 10px;
 }
 
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #aaa;
+}
+.contact-form button {
+    background: var(--green-dark);
+    color: var(--cream);
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.contact-form button:hover {
+    transform: scale(1.05);
+    background: var(--green-light);
+}
+
 footer {
     text-align: center;
     background: var(--green-dark);
@@ -181,7 +165,6 @@ footer {
     padding: 20px;
     margin-top: 30px;
 }
-
 @keyframes slideInLeft {
     from { transform: translateX(-100%); opacity: 0; }
     to { transform: translateX(0); opacity: 1; }
@@ -192,24 +175,27 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .container { flex-direction: column; }
-    .sidebar, .content { width: 100%; }
-    .float-box { float: none; margin: 10px auto; display: block; }
+    .container {
+        flex-direction: column;
+    }
+    .sidebar, .content {
+        width: 100%;
+    }
+    .float-box {
+        float: none;
+        margin: 10px auto;
+        display: block;
+    }
 }
 </style>
 </head>
 
 <body>
-
 <div class="navbar">
     <a href="#">Home</a>
     <a href="#">Skills</a>
     <a href="#">Projects</a>
     <a href="#">Contact</a>
-
-    <!-- THEME SWITCH BUTTON + STATUS -->
-    <button class="theme-btn" onclick="toggleTheme()">Change Theme</button>
-    <span class="theme-status" id="themeStatus">Light Mode</span>
 </div>
 
 <div class="top-space"></div>
@@ -236,7 +222,7 @@ footer {
                 Creative Designer<br>
                 Fast Learner 💡
             </div>
-            A passionate Computer Science student skilled in UI/UX, Web Design, Python, and Java.
+            A passionate Computer Science student skilled in UI/UX, Web Design, Python, and Java. 
             I enjoy building beautiful, functional, and responsive web interfaces.
         </p>
 
@@ -266,40 +252,21 @@ footer {
         </table>
 
         <h2>Projects & Experience</h2>
-        <ul>
-            <li><b>RescueNet – Disaster Management & Civic Engagement Project</b>  
-                – Real-time flood alerts, drone visuals, safety dashboard, and emergency support.</li>
-            <li><b>Zero School Internship (15 Days)</b> – Real-time application development.</li>
-            <li><b>Blitz Work Internship (30 Days)</b> – AI systems development.</li>
+        <li><b>Blitz Work Internship (30 Days)</b> – AI systems development.</li>
+            <li><b>Zero School Internship (15 Days)</b> – Worked on real-time applications.</li>
+            <li><b>Blitz Work Internship (30 Days)</b> – AI & IoT systems development.</li>
+            <li><b>RescueNet – Disaster Management Application</b> – A real-time web & mobile platform providing safety alerts, flood forecast, food assistance, and drone visuals for rescue operations.</li>
         </ul>
 
         <h2>Technical Skills</h2>
         <ul>
-            <li>Python, Java, C++</li>
+    <li>Python, Java, C++</li>
             <li>Frontend Development (HTML, CSS, JavaScript, React.js)</li>
             <li>UI/UX Designing</li>
         </ul>
 
-    </div>
-</div>
-
-<footer>
-    © 2025 | Designed by Madhumithaa | WebVibe Studios
-</footer>
-
-<script>
-function toggleTheme() {
-    document.body.classList.toggle("dark");
-
-    const status = document.getElementById("themeStatus");
-
-    if (document.body.classList.contains("dark")) {
-        status.innerText = "Dark Mode";
-    } else {
-        status.innerText = "Light Mode";
-    }
-}
-</script>
-
-</body>
-</html>
+        <h2>Contact Me</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="4" placeholder="Your Message" required></textarea>
